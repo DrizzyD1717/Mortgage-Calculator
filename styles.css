@@ -1,0 +1,304 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+    --lime: hsl(61, 70%, 52%);
+    --red: hsl(4, 69%, 50%);
+
+    --slate100: White: hsl(0, 0%, 100%);
+    --slate100: hsl(202, 86%, 94%);
+    --slate300: hsl(203, 41%, 72%);
+    --slate500: hsl(200, 26%, 54%);
+    --slate700: hsl(200, 24%, 40%);
+    --slate900: hsl(202, 55%, 16%);
+
+}
+
+.errorMessage {
+  color: var(--red);
+}
+
+.errorBg {
+  background-color: var(--red);
+}
+
+.mortgageTypeOverall .mortgageType .greenBorder {
+  border: 2px solid var(--lime);
+}
+
+span {
+  background-color: var(--slate100);
+  padding: 0.5rem;
+  position: absolute;
+}
+
+label {
+  color: var(--slate500);
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--slate100);
+  position: relative;
+
+}
+
+.overall {
+  width: 60%;
+  height: 70%;
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.overallLeft {
+  padding: 1rem;
+  flex-basis: 50%;
+  width: 100%;
+}
+
+.overallTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.overallTitle h2 {
+  color: var(--slate900);
+}
+
+.overallTitle button {
+  background: transparent;
+  border: none;
+  text-decoration: underline;
+  color: var(--slate500);
+}
+
+form {
+  width: 100%;
+}
+
+.mortgageAmount {
+  margin-bottom: 1rem;
+}
+
+.input {
+  position: relative;
+}
+
+.input input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  border: 2px solid var(--slate500);
+  overflow: hidden;
+
+}
+
+.mortgageAmount .input span {
+  top: 0;
+  left: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.mortgageAmount input {
+  padding-left: 2rem;
+}
+
+.mortgageTermRate {
+  display: flex;
+  gap: 0 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.mortgageTermRate input {
+  padding-right: 2rem;
+  width: 100%;
+  display: block;
+}
+
+.term, .input, .rate {
+  width: 100%;
+}
+
+.mortgageTermRate span{
+  right: 0;
+  top: 0;
+  border-radius: 0 7px 7px 0;
+}
+
+.repayment, .interest {
+  padding: 0.5rem;
+  border: 2px solid var(--slate500);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0 0.5rem;
+}
+
+.mortgageType {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+} 
+
+.mortgageType label {
+  color: var(--slate900);
+  font-weight: bold;
+}
+
+.submit {
+  padding: 0.5rem 1rem;
+  background-color: var(--lime);
+  color: var(--slate900);
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.submit:hover {
+  cursor: pointer;
+}
+
+
+
+.overallRight {
+  background-color: var(--slate900);
+  padding: 1rem;
+  flex-basis: 50%;
+  border-radius: 0 10px 10px 60px;
+  height: 100%;
+  
+}
+
+.empty {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.empty p {
+  color: var(--slate300);
+  font-size: 14px;
+
+}
+
+
+.results {
+}
+
+.results h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+
+}
+
+.results p {
+  color: var(--slate500);
+  font-size: 14px;
+}
+
+.actualResults {
+  padding: 1rem;
+  border-top: 2px solid var(--lime);
+  margin-top: 1.5rem;
+  background-color: hsl(201, 57%, 9%);
+  border-radius: 10px;
+
+}
+
+.monthlyResults {
+  margin-bottom: 1rem;
+}
+
+.termResults {
+  border-top: 1px solid var(--slate300);
+  padding-top: 1rem;
+}
+
+.results .monthlyResults .monthlyResultsValue {
+  color: var(--lime);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.results .termResults .termResultsValue {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+}
+
+.hidden {
+  display: none;
+}
+
+
+@media(max-width: 1000px) {
+  .overall {
+    width: 80%;
+  }
+}
+
+
+@media(max-width: 750px) {
+  body {
+    padding: 1rem 1rem 3rem 1rem;
+    height: unset;
+  }
+  .overall {
+    width: 100%;
+    height: unset;
+    flex-direction: column;
+  }
+  .overallTitle {
+    flex-direction: column;
+    justify-content: unset;
+  }
+  .overallTitle button {
+    display: inline-block;
+    width: 100px;
+  }
+  .mortgageTermRate {
+    flex-direction: column;
+  }
+  .overallRight {
+    border-radius: 0 0 0 0;
+  }
+}
+
+
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+}
